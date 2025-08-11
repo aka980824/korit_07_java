@@ -10,6 +10,10 @@ public class Computer implements Power{
     public void off() {
         System.out.println("전원이 꺼졌습니다.");
     }
+
+    public void compute(){
+        System.out.println("컴퓨터가 연산을 수행합니다.");
+    }
 }
 /*
     프로그램 구현 사항
