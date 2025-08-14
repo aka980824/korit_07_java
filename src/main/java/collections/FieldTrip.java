@@ -26,17 +26,17 @@ import java.util.*;
         */
 public class FieldTrip {
     public static void main(String[] args) {
-        Set<String> fieldTripsStr = new HashSet<>();
+        Set<String> fieldTripsSet = new HashSet<>();
         List<String> fieldTripsList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-
+        int a=0;
         System.out.print("학생 숫자를 입력하세요. : ");
-        int a = scanner.nextInt();
+        a = scanner.nextInt();
         scanner.nextLine();
         //List 객체 생성
         for(int i=0;i<a;i++){
             System.out.print((i+1)+"번 째 학생의 후보지를 입력하세요 : ");
-            String place = scanner.nextLine().trim();
+            String place = scanner.nextLine();
             fieldTripsList.add(place);
         }
         System.out.println();
@@ -45,10 +45,10 @@ public class FieldTrip {
             System.out.println((i+1)+"번째 학생의 후보지 : "+fieldTripsList.get(i));
         }
         System.out.println();
-
-        fieldTripsStr.addAll(fieldTripsList);
+        //하단의내용 > 중복제거
+        fieldTripsSet.addAll(fieldTripsList);
         System.out.println("수학 여행지 후보");
-        for (String place : fieldTripsStr) {
+        for (String place : fieldTripsSet) {
             System.out.println(place);
         }
         System.out.println("입니다.");
