@@ -53,6 +53,8 @@ public class BookMap {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Map<String , Integer> bookInventory = new HashMap<>();
+        bookInventory.put("자바의 정석",1);
+
         boolean endOfProgram = false;
         while(true) {
             System.out.println("--- 재고관리 프로그램 ---");
